@@ -1,7 +1,8 @@
-myApp.controller("sumController", ["$scope", function($scope) {
+myApp.controller("sumController",["$scope",  "Calculation", "$rootScope", function($scope, Calculation ,$rootScope ) {
     $scope.sum = function() {
-        $scope.message = "Summation: ";
-        $scope.result = $scope.numberA + $scope.numberB;
+        $rootScope.message = "Summation: ";
+        // $rootScope.result = $rootScope.numberA+$rootScope.numberB;
+        $rootScope.result = Calculation.addition($rootScope.numberA, $rootScope.numberB);
     };
   }
 ]);

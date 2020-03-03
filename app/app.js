@@ -1,25 +1,7 @@
 var myApp = angular.module('myApp', []);
 
-/*myApp.controller('myController',["$scope", function($scope){   
-
-    $scope.sum = function(){
-        if(typeChecking() == true){
-            $scope.message = "Summation: ";
-            var numberA = convertIntoNumber($scope.numberA);
-            var numberB = convertIntoNumber($scope.numberB);
-            $scope.result = numberA+numberB;
-        }else
-            $scope.message = "Please give a valid number";
-    }
-    $scope.subtract = function(){
-        if(typeChecking() == true){
-            $scope.message = "Subtraction: ";
-            var numberA = convertIntoNumber($scope.numberA);
-            var numberB = convertIntoNumber($scope.numberB);
-            $scope.result = numberA-numberB;
-        }else
-            $scope.message = "Please give a valid number";
-    }
+ myApp.controller('myController',["$scope", function($scope){   
+    
     $scope.multiply = function(){
         if(typeChecking() == true){
             $scope.message = "Multiplication: ";
@@ -50,4 +32,4 @@ var myApp = angular.module('myApp', []);
     function convertIntoNumber(number){
         return Number(number);
     }
-}]);*/
+}]);

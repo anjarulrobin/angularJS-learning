@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AngularJS project</title>
-    <script src="./app/lib/angular.min.js"></script>
-    <script src="./app/app.js"></script>
-    <script src="./controllers/sumController.js"></script>
-  </head>
-  <body ng-app="myApp">
-    <div ng-controller="sumController">
-      <div>
-        <input type="number" ng-model = "numberA" placeholder="Enter a number"> <br><br>
-        <input type="number" ng-model = "numberB" placeholder="Enter another number"><br><br>
-        <button ng-click="sum()"> Sum </button><br><br>
-        <button ng-click="subtract()"> Subtract </button><br><br>
-        <button ng-click="multiply()"> Multiply</button><br><br>
-        <button ng-click="divide()"> Divide</button><br><br>
-        <p >{{message}}: {{result}}</p>
-      </div>      
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AngularJS project</title>
+  <script src="./app/lib/angular.min.js"></script>
+  <script src="./app/app.js"></script>
+  <script src="./app-services.js"></script>
+  <script src="./controllers/sumController.js"></script>
+  <script src="./controllers/subController.js"></script>
+  <script src="./controllers/mulController.js"></script>
+  <script src="./controllers/divController.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+  <input type="number" ng-model="numberA" placeholder="Enter a number"> <br><br>
+  <input type="number" ng-model="numberB" placeholder="Enter another number"><br>
+  <p>{{message}} {{result}}</p>
+
+  <div ng-controller="sumController">
+    <button ng-click="sum()"> Sum </button> <br> <br>
+  </div>
+
+  <div ng-controller="subController">
+    <button ng-click="sub()"> Sub </button> <br> <br>
+  </div>
+
+  <div ng-controller="mulController">
+    <button ng-click="mul()"> Mul </button> <br> <br>
+  </div>
+
+  <div ng-controller="divController">
+    <button ng-click="div()"> Div </button> <br> <br>
+  </div>
+</body>
+
 </html>
